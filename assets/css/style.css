@@ -1,0 +1,292 @@
+/* ============================================================
+   Async Kernel >_  —  Feuille de style commune
+   
+   Design tokens et structure pour asynckernel.fr
+   ============================================================ */
+
+:root {
+  /* Palette : bleu nuit apaisant, couleur fréquemment ressentie comme reposante
+     par les profils sensoriellement sensibles. Le crème chaud des textes
+     apporte le contraste sans agressivité. */
+  --bg: #0E1A2B;          /* Bleu nuit profond, désaturé */
+  --bg-elev: #16263D;     /* Élévation pour zones distinguées */
+  --fg: #E8E2D0;          /* Texte principal, crème chaud */
+  --fg-muted: #8A93A4;    /* Texte secondaire, harmonisé au bleu */
+  --accent: #D8C77E;      /* Jaune chaud — complément chromatique du bleu */
+  --prompt: #7DB8A8;      /* Vert d'eau muet pour les prompts terminal */
+  --rule: #1F3050;        /* Séparateurs dans la famille bleu */
+  
+  /* Typographie */
+  --font-mono: "JetBrains Mono", ui-monospace, "Menlo", "Consolas", monospace;
+  --font-body: "EB Garamond", "Iowan Old Style", "Palatino Linotype", Palatino, serif;
+  
+  /* Échelle d'espacement (multiples de 4px) */
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 16px;
+  --s-4: 24px;
+  --s-5: 40px;
+  --s-6: 64px;
+  --s-7: 96px;
+  
+  /* Layout */
+  --container-max: 640px;
+}
+
+/* ------------------------------------------------------------
+   Reset minimaliste
+   ------------------------------------------------------------ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  /* Trame pointillée discrète, écho au papier pointillé du carnet */
+  background-image: radial-gradient(circle, rgba(232, 226, 208, 0.04) 1px, transparent 1px);
+  background-size: 16px 16px;
+  color: var(--fg);
+  font-family: var(--font-body);
+  font-size: 1.0625rem; /* 17px */
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* ------------------------------------------------------------
+   Container
+   ------------------------------------------------------------ */
+
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--s-4);
+}
+
+/* ------------------------------------------------------------
+   Header
+   ------------------------------------------------------------ */
+
+.site-header {
+  padding: var(--s-5) 0 var(--s-3);
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: var(--s-6);
+}
+
+.brand {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--fg);
+  text-decoration: none;
+  display: inline-block;
+}
+
+.brand:hover { color: var(--fg); }
+.brand .prompt { color: var(--prompt); }
+
+/* ------------------------------------------------------------
+   Hero
+   ------------------------------------------------------------ */
+
+.hero {
+  margin-bottom: var(--s-6);
+}
+
+.hero h1 {
+  font-family: var(--font-body);
+  font-size: 2.25rem;
+  line-height: 1.1;
+  font-weight: 500;
+  margin: 0 0 var(--s-4);
+  color: var(--fg);
+  letter-spacing: -0.01em;
+}
+
+.hero .lede {
+  font-size: 1.125rem;
+  color: var(--fg-muted);
+  max-width: 32em;
+  margin: 0;
+  line-height: 1.55;
+}
+
+/* ------------------------------------------------------------
+   Sections
+   ------------------------------------------------------------ */
+
+section {
+  margin-bottom: var(--s-6);
+}
+
+.section-prompt {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  color: var(--prompt);
+  margin: 0 0 var(--s-3);
+  letter-spacing: 0.02em;
+  font-weight: 500;
+}
+
+.section-prompt::before {
+  content: ">_ ";
+  opacity: 0.7;
+}
+
+/* ------------------------------------------------------------
+   Produits / entries
+   ------------------------------------------------------------ */
+
+.product {
+  padding: var(--s-4) 0;
+  border-top: 1px solid var(--rule);
+}
+
+.product:last-child {
+  border-bottom: 1px solid var(--rule);
+}
+
+.product h3 {
+  font-family: var(--font-body);
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin: 0 0 var(--s-2);
+  color: var(--fg);
+  letter-spacing: -0.005em;
+}
+
+.product p {
+  margin: 0 0 var(--s-3);
+  color: var(--fg);
+  max-width: 38em;
+}
+
+.product .meta {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  color: var(--fg-muted);
+  margin-bottom: 0;
+  letter-spacing: 0.01em;
+}
+
+.product .meta a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--accent);
+  padding-bottom: 1px;
+  transition: color 120ms ease, border-color 120ms ease;
+}
+
+.product .meta a:hover,
+.product .meta a:focus {
+  color: var(--fg);
+  border-bottom-color: var(--fg);
+}
+
+/* ------------------------------------------------------------
+   Notice (avis en haut de page, registre system notice)
+   ------------------------------------------------------------ */
+
+.notice {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  color: var(--fg-muted);
+  background: var(--bg-elev);
+  padding: var(--s-3) var(--s-4);
+  margin: 0 0 var(--s-6);
+  border-left: 2px solid var(--prompt);
+  line-height: 1.55;
+  letter-spacing: 0.01em;
+}
+
+/* ------------------------------------------------------------
+   Disclosure (mention affiliation)
+   ------------------------------------------------------------ */
+
+.disclosure {
+  margin-top: var(--s-7);
+  padding: var(--s-3) var(--s-4);
+  background: var(--bg-elev);
+  border-left: 2px solid var(--accent);
+  font-size: 0.9375rem;
+  color: var(--fg-muted);
+  line-height: 1.55;
+}
+
+.disclosure p { margin: 0; }
+.disclosure strong { color: var(--fg); font-weight: 500; }
+
+/* ------------------------------------------------------------
+   Footer
+   ------------------------------------------------------------ */
+
+.site-footer {
+  margin-top: var(--s-7);
+  padding: var(--s-5) 0;
+  border-top: 1px solid var(--rule);
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  color: var(--fg-muted);
+  letter-spacing: 0.01em;
+}
+
+.site-footer p { margin: 0; }
+
+.site-footer a {
+  color: var(--fg-muted);
+  text-decoration: none;
+  border-bottom: 1px dotted transparent;
+  transition: color 120ms ease, border-color 120ms ease;
+}
+
+.site-footer a:hover,
+.site-footer a:focus {
+  color: var(--fg);
+  border-bottom-color: var(--fg-muted);
+}
+
+.site-footer .prompt { color: var(--prompt); }
+
+/* ------------------------------------------------------------
+   États de focus accessibles
+   ------------------------------------------------------------ */
+
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 1px;
+}
+
+/* ------------------------------------------------------------
+   Responsive (mobile-first, ce bloc est pour tablette+)
+   ------------------------------------------------------------ */
+
+@media (min-width: 768px) {
+  body { font-size: 1.125rem; } /* 18px */
+  
+  .hero h1 { font-size: 2.75rem; }
+  
+  .container { padding: 0 var(--s-5); }
+  
+  .site-header { padding-top: var(--s-6); }
+}
+
+@media (min-width: 1024px) {
+  .hero h1 { font-size: 3rem; }
+}
