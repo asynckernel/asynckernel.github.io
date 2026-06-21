@@ -5,16 +5,15 @@
    ============================================================ */
 
 :root {
-  /* Palette : bleu nuit apaisant, couleur fréquemment ressentie comme reposante
-     par les profils sensoriellement sensibles. Le crème chaud des textes
-     apporte le contraste sans agressivité. */
-  --bg: #0E1A2B;          /* Bleu nuit profond, désaturé */
-  --bg-elev: #16263D;     /* Élévation pour zones distinguées */
+  /* Palette : bleu nuit apaisant, alignée sur la couverture du livre Trois carnets.
+     Le crème chaud des textes apporte le contraste sans agressivité. */
+  --bg: #162842;          /* Bleu nuit légèrement éclairci (cohérence couverture) */
+  --bg-elev: #243959;     /* Élévation pour zones distinguées */
   --fg: #E8E2D0;          /* Texte principal, crème chaud */
   --fg-muted: #8A93A4;    /* Texte secondaire, harmonisé au bleu */
   --accent: #D8C77E;      /* Jaune chaud — complément chromatique du bleu */
   --prompt: #7DB8A8;      /* Vert d'eau muet pour les prompts terminal */
-  --rule: #1F3050;        /* Séparateurs dans la famille bleu */
+  --rule: #243959;        /* Séparateurs, alignés sur bg-elev pour cohérence */
   
   /* Typographie */
   --font-mono: "JetBrains Mono", ui-monospace, "Menlo", "Consolas", monospace;
