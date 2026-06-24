@@ -4,20 +4,29 @@ Site officiel des éditions **Async Kernel >_**.
 
 Servi à l'adresse https://asynckernel.fr via GitHub Pages.
 
+## Livres publiés
+
+| Titre | Numérique | Papier | Page outils |
+|---|---|---|---|
+| Trois carnets pour reprendre pied | [Amazon](https://amzn.to/3QvR60D) ~6,99 € | [Amazon](https://amzn.to/4ez51fH) ~11,98 € | `/trois-carnets/` |
+| Un iPhone qui n'épuise pas | [Amazon](https://amzn.to/4oJAZJu) ~6,99 € | [Amazon](https://amzn.to/4b7EIe7) ~11,98 € | `/un-iphone-qui-nepuise-pas/` |
+
 ## Structure
 
 ```
 .
-├── index.html              ← accueil de la marque
+├── index.html                          ← accueil de la marque (ls bibliothèque/)
 ├── trois-carnets/
-│   └── index.html          ← page compagnon du livre
-├── 404.html                ← page d'erreur
+│   └── index.html                      ← page outils du livre 1
+├── un-iphone-qui-nepuise-pas/
+│   └── index.html                      ← page outils du livre 2
+├── 404.html                            ← page d'erreur
 ├── assets/
 │   └── css/
-│       └── style.css       ← feuille de style commune
-├── CNAME                   ← domaine personnalisé pour GitHub Pages
-├── .nojekyll               ← désactive Jekyll (le site est servi tel quel)
-├── robots.txt              ← configuration indexation
+│       └── style.css                   ← feuille de style commune
+├── CNAME                               ← domaine personnalisé pour GitHub Pages
+├── .nojekyll                           ← désactive Jekyll (le site est servi tel quel)
+├── robots.txt                          ← configuration indexation
 └── README.md
 ```
 
@@ -25,9 +34,9 @@ Servi à l'adresse https://asynckernel.fr via GitHub Pages.
 
 Chaque push sur la branche `main` déclenche un déploiement automatique sur GitHub Pages.
 
-## Ajouter un produit recommandé
+## Ajouter un produit recommandé sur une page outils
 
-1. Éditer `trois-carnets/index.html`
+1. Éditer `<slug-du-livre>/index.html`
 2. Copier un bloc `<article class="product">…</article>` existant
 3. Adapter titre, description, prix et lien d'affiliation
 4. Commit + push
@@ -35,13 +44,13 @@ Chaque push sur la branche `main` déclenche un déploiement automatique sur Git
 ## Ajouter un nouveau livre
 
 1. Créer un nouveau dossier à la racine, par exemple `nouveau-titre/`
-2. Y placer un `index.html` qui suit la structure de `trois-carnets/index.html`
-3. Ajouter une référence dans la section `ls bibliothèque/` du `index.html` racine
+2. Y placer un `index.html` qui suit la structure de `un-iphone-qui-nepuise-pas/index.html`
+3. Ajouter un `<article class="product">` dans la section `ls bibliothèque/` de `index.html` (racine)
 4. Commit + push
 
 ## Polices
 
-Les polices sont actuellement chargées depuis Google Fonts (JetBrains Mono + EB Garamond).
+Les polices sont chargées depuis Google Fonts (JetBrains Mono + EB Garamond).
 
 **TODO :** héberger localement les polices pour respect des données personnelles européennes et chargement plus rapide. Voir [google-webfonts-helper](https://gwfh.mranftl.com/fonts) pour générer les fichiers `.woff2` et les `@font-face` correspondants.
 
