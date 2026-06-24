@@ -50,9 +50,7 @@ Chaque push sur la branche `main` déclenche un déploiement automatique sur Git
 
 ## Polices
 
-Les polices sont chargées depuis Google Fonts (JetBrains Mono + EB Garamond).
-
-**TODO :** héberger localement les polices pour respect des données personnelles européennes et chargement plus rapide. Voir [google-webfonts-helper](https://gwfh.mranftl.com/fonts) pour générer les fichiers `.woff2` et les `@font-face` correspondants.
+JetBrains Mono et EB Garamond sont auto-hébergées dans `assets/fonts/` (subsets `latin` et `latin-ext`, format `.woff2`). Les `@font-face` sont déclarés en tête de `assets/css/style.css`. Aucune requête externe au chargement des pages.
 
 ## Licence
 
