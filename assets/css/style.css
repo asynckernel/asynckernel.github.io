@@ -254,6 +254,41 @@ section {
 }
 
 /* ------------------------------------------------------------
+   Listes dans les articles
+   ------------------------------------------------------------ */
+
+.product ol {
+  margin: 0 0 var(--s-3);
+  padding-left: var(--s-4);
+  color: var(--fg);
+  max-width: 38em;
+}
+
+.product ol li {
+  margin-bottom: var(--s-2);
+  padding-left: var(--s-2);
+  line-height: 1.55;
+}
+
+.product ol li:last-child {
+  margin-bottom: 0;
+}
+
+/* ------------------------------------------------------------
+   Code inline
+   ------------------------------------------------------------ */
+
+code {
+  font-family: var(--font-mono);
+  font-size: 0.83em;
+  background: var(--bg-elev);
+  color: var(--accent);
+  padding: 0.1em 0.35em;
+  border-radius: 3px;
+  letter-spacing: 0;
+}
+
+/* ------------------------------------------------------------
    Notice (avis en haut de page, registre system notice)
    ------------------------------------------------------------ */
 
@@ -263,10 +298,17 @@ section {
   color: var(--fg-muted);
   background: var(--bg-elev);
   padding: var(--s-3) var(--s-4);
-  margin: 0 0 var(--s-6);
+  margin: 0 0 var(--s-4);
   border-left: 2px solid var(--prompt);
   line-height: 1.55;
   letter-spacing: 0.01em;
+}
+
+.notice a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--accent);
+  padding-bottom: 1px;
 }
 
 /* ------------------------------------------------------------

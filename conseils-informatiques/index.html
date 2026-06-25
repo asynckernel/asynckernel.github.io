@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conseils informatiques · Async Kernel &gt;_</title>
+  <meta name="description" content="Astuces pratiques et transversales pour simplifier son quotidien numérique — CalDAV, CardDAV, mots de passe, sauvegardes. Pour profils HPI, TSA et TDA/H.">
+  <meta name="theme-color" content="#162842">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a href="/" class="brand">Async Kernel <span class="prompt">&gt;_</span></a>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="hero">
+        <h1>Conseils informatiques.</h1>
+        <p class="lede">Astuces pratiques et indépendantes des grandes plateformes. Pour simplifier sa vie numérique sans s'y perdre — et sans avoir à tout réapprendre à chaque mise à jour.</p>
+      </div>
+
+      <section>
+        <p class="section-prompt">ls calendriers-et-contacts/</p>
+
+        <article class="product">
+          <h3>Accéder à son iCloud depuis Thunderbird — agendas et contacts</h3>
+          <p>Thunderbird peut se connecter directement à iCloud via les protocoles CalDAV et CarDAV. Vos agendas et contacts Apple apparaissent alors dans Thunderbird comme s'ils étaient natifs — sans plugin tiers, sans synchronisation intermédiaire, depuis Windows, Linux ou macOS.</p>
+
+          <div class="notice">
+            <strong>Prérequis :</strong> un mot de passe d'application dédié, différent de votre mot de passe Apple habituel. Générez-en un depuis <a href="https://account.apple.com/">account.apple.com</a> → Sécurité → Mots de passe d'application.
+          </div>
+
+          <p><strong>Agendas</strong></p>
+          <ol>
+            <li>Dans Thunderbird, ouvrez la vue <strong>Agenda</strong>.</li>
+            <li>Cliquez sur <strong>Nouvel agenda…</strong></li>
+            <li>Choisissez <strong>Sur le réseau</strong>.</li>
+            <li>Saisissez votre identifiant Apple (adresse e-mail du compte) et comme adresse : <code>https://caldav.icloud.com</code></li>
+            <li>Entrez le mot de passe d'application généré à l'étape préalable.</li>
+            <li>Tous vos agendas iCloud apparaissent d'un coup automatiquement.</li>
+          </ol>
+
+          <p><strong>Contacts</strong></p>
+          <p>La même procédure fonctionne pour les contacts dans le <strong>Carnet d'adresses</strong> de Thunderbird. Utilisez l'adresse <code>https://contacts.icloud.com</code> à la place de celle des agendas.</p>
+        </article>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Async Kernel <span class="prompt">&gt;_</span> · <a href="/">accueil</a> · contact@asynckernel.fr</p>
+    </div>
+  </footer>
+</body>
+</html>
