@@ -386,3 +386,31 @@ a:focus-visible {
 @media (min-width: 1024px) {
   .hero h1 { font-size: 3rem; }
 }
+
+/* ------------------------------------------------------------
+   Titres de section dans le contenu long (articles de blog)
+   ------------------------------------------------------------ */
+
+article h2 {
+  font-family: var(--font-body);
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.25;
+  color: var(--fg);
+  letter-spacing: -0.005em;
+  margin: var(--s-6) 0 var(--s-3);
+}
+
+article p,
+article ul {
+  max-width: 38em;
+  margin: 0 0 var(--s-3);
+}
+
+article ul {
+  padding-left: 1.25em;
+}
+
+article li {
+  margin-bottom: var(--s-2);
+}
