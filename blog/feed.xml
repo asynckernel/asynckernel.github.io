@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Async Kernel &gt;_ — Blog</title>
     <link>https://asynckernel.fr/blog/</link>
+    <atom:link href="https://asynckernel.fr/blog/feed.xml" rel="self" type="application/rss+xml" />
     <description>Notes de veille et tutoriels autour des systèmes pratiques pour penseurs intensifs.</description>
     <language>fr</language>
-    <lastBuildDate>Wed, 01 Jul 2026 22:42:25 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 02 Jul 2026 03:50:49 +0000</lastBuildDate>
     <item>
       <title>L'agenda comme mémoire morte</title>
       <link>https://asynckernel.fr/blog/agenda-memoire-morte/</link>
