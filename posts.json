@@ -1,0 +1,15 @@
+{
+  "site_title": "Async Kernel >_",
+  "site_url": "https://asynckernel.fr",
+  "blog_title": "Async Kernel >_ — Blog",
+  "blog_description": "Notes de veille et tutoriels autour des systèmes pratiques pour penseurs intensifs.",
+  "posts": [
+    {
+      "slug": "agenda-memoire-morte",
+      "title": "L'agenda comme mémoire morte",
+      "date": "2026-07-02",
+      "excerpt": "Pourquoi la cartographie d'énergie d'un agenda papier change la façon de planifier sa semaine.",
+      "tags": ["agenda", "cartographie d'énergie"]
+    }
+  ]
+}
