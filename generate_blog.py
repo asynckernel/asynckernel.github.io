@@ -25,10 +25,7 @@ ROOT = Path(__file__).parent
 POSTS_JSON = ROOT / "posts.json"
 BLOG_DIR = ROOT / "blog"
 
-HEAD_COMMON = """  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap">
-  <link rel="stylesheet" href="/assets/css/style.css">"""
+HEAD_COMMON = """  <link rel="stylesheet" href="/assets/css/style.css">"""
 
 HEADER = """  <header class="site-header">
     <div class="container">

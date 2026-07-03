@@ -133,6 +133,25 @@ body {
 }
 
 /* ------------------------------------------------------------
+   Liens génériques (repli pour tout lien sans classe dédiée —
+   ex. titres d'articles dans ls blog/, liens en prose dans un billet)
+   ------------------------------------------------------------ */
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--accent);
+  padding-bottom: 1px;
+  transition: color 120ms ease, border-color 120ms ease;
+}
+
+a:hover,
+a:focus {
+  color: var(--fg);
+  border-bottom-color: var(--fg);
+}
+
+/* ------------------------------------------------------------
    Header
    ------------------------------------------------------------ */
 
@@ -149,6 +168,7 @@ body {
   letter-spacing: 0.02em;
   color: var(--fg);
   text-decoration: none;
+  border-bottom: none;   
   display: inline-block;
 }
 
