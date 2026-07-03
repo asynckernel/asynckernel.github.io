@@ -6,37 +6,42 @@ Servi à l'adresse https://asynckernel.fr via GitHub Pages.
 
 ## Structure
 
+<!-- STRUCTURE:START (généré par update-readme-structure.py, ne pas éditer à la main entre ces marqueurs) -->
 ```
 .
-├── index.html                          ← accueil de la marque
-├── trois-carnets/
-│   └── index.html                      ← page compagnon du tome 1
-├── un-iphone-qui-nepuise-pas/
-│   └── index.html                      ← page compagnon du tome 2
-├── jegardelecontrolesurmonordi/
-│   └── index.html                      ← page compagnon du tome 3
-├── conseils-informatiques/
-│   └── index.html                      ← astuces transversales, accès libre
-├── blog/
-│   ├── index.html                      ← généré par generate_blog.py
-│   ├── feed.xml                        ← généré par generate_blog.py (RSS 2.0)
-│   └── <slug>/index.html               ← un article par dossier, écrit à la main
-├── posts.json                          ← source de vérité du blog
-├── generate_blog.py                    ← régénère blog/index.html + blog/feed.xml
-├── generate_sitemap.py                 ← régénère sitemap.xml (pages statiques + blog)
-├── nouveau-livret.py                   ← scaffolding page compagnon + entrée accueil
-├── nouveau-conseil.py                  ← ajoute un conseil sur conseils-informatiques/
-├── sitemap.xml                         ← généré, à régénérer après tout ajout de page
-├── 404.html                            ← page d'erreur
 ├── assets/
 │   ├── css/
 │   │   └── style.css                   ← feuille de style commune
 │   └── fonts/                          ← polices auto-hébergées (EB Garamond, JetBrains Mono)
-├── CNAME                               ← domaine personnalisé pour GitHub Pages
+├── blog/                               ← notes de veille, RSS
+│   ├── agenda-memoire-morte/
+│   │   └── index.html
+│   ├── feed.xml                        ← généré par generate_blog.py (RSS 2.0)
+│   └── index.html                      ← généré par generate_blog.py
+├── conseils-informatiques/             ← astuces transversales, accès libre
+│   └── index.html
+├── jegardelecontrolesurmonordi/        ← page compagnon du tome 3
+│   └── index.html
+├── trois-carnets/                      ← page compagnon du tome 1
+│   └── index.html
+├── un-iphone-qui-nepuise-pas/          ← page compagnon du tome 2
+│   └── index.html
+├── {trois-carnets,assets/
+│   └── css}/
 ├── .nojekyll                           ← désactive Jekyll (le site est servi tel quel)
+├── 404.html                            ← page d'erreur
+├── CNAME                               ← domaine personnalisé pour GitHub Pages
+├── generate_blog.py                    ← régénère blog/index.html + blog/feed.xml
+├── generate_sitemap.py                 ← régénère sitemap.xml (pages statiques + blog)
+├── index.bak
+├── index.html                          ← accueil de la marque
+├── posts.json                          ← source de vérité du blog
+├── README.md
 ├── robots.txt                          ← configuration indexation
-└── README.md
+├── sitemap.xml                         ← généré, à régénérer après tout ajout de page
+└── update-readme-structure.py          ← régénère ce bloc de structure
 ```
+<!-- STRUCTURE:END -->
 
 ## Déploiement
 
@@ -48,32 +53,42 @@ Chaque push sur la branche `main` déclenche un déploiement automatique sur Git
 et `blog/feed.xml` à partir de ce fichier — ne touche jamais aux pages d'articles
 individuelles (`blog/<slug>/index.html`), écrites à la main.
 
-Nouvel article :
-1. Dupliquer un dossier `blog/<slug-existant>/` (ou utiliser l'outil local `nouveau-billet.py`,
-   voir `~/scripts/asynckernel-blog/`)
-2. Ajouter l'entrée dans `posts.json`
-3. `python3 generate_blog.py`
-4. `python3 generate_sitemap.py`
-5. Commit + push, puis vérifier le flux sur [validator.w3.org/feed](https://validator.w3.org/feed/)
+## Blog, livret, conseil — interface locale
+
+`~/scripts/asynckernel-blog/admin.py` (hors de ce repo, volontairement — voir plus bas)
+est l'interface unique pour créer un billet, une page compagnon (« livret ») ou un conseil.
+Lancer `python3 admin.py`, ou double-clic sur le raccourci bureau. Mode d'emploi intégré
+dans la page. Aucune de ces actions ne fait git add/commit/push ni ne met à jour le sitemap
+ou la structure du README — étape de relecture volontairement conservée, rappel affiché
+après chaque création.
+
+## Blog et flux RSS
+
+`posts.json` est la source de vérité unique. `generate_blog.py` régénère `blog/index.html`
+et `blog/feed.xml` à partir de ce fichier — ne touche jamais aux pages d'articles
+individuelles (`blog/<slug>/index.html`), écrites à la main. Appelé automatiquement par
+`admin.py` à la création d'un billet.
 
 ## Sitemap
 
 `sitemap.xml` est généré par `generate_sitemap.py` à partir d'une liste de pages statiques
 (codée en dur en haut du script — à mettre à jour à chaque nouveau livret) et de `posts.json`
 pour les articles de blog. Pas de mise à jour automatique au push : à relancer manuellement
-après toute nouvelle page.
+(onglet Maintenance de `admin.py`, ou `python3 generate_sitemap.py`).
 
-## Nouveau livret
+## Structure du README
 
-`python3 nouveau-livret.py` (interactif) crée `<slug>/index.html` (gabarit avec sections TODO
-à remplir) et ajoute automatiquement l'entrée correspondante dans la section
-`ls bibliothèque/` de `index.html`. Ne met pas à jour le sitemap ni ce README — rappels
-affichés en fin d'exécution.
+Le bloc de structure ci-dessus, entre les marqueurs `STRUCTURE:START`/`STRUCTURE:END`, est
+généré par `update-readme-structure.py` (scan réel du repo). À relancer après tout ajout de
+fichier (onglet Maintenance de `admin.py`, ou `python3 update-readme-structure.py`). Les
+commentaires (« ← accueil de la marque », etc.) viennent d'une table dans le script — à
+compléter à la main pour qu'un nouveau fichier apparaisse commenté.
 
-## Nouveau conseil
+## Pourquoi admin.py est hors du repo
 
-`python3 nouveau-conseil.py` (interactif) ajoute un article à `conseils-informatiques/index.html`,
-dans une rubrique existante ou une nouvelle rubrique `ls <catégorie>/`.
+Ce repo est publié tel quel sur GitHub Pages : tout fichier ici est servi publiquement sur
+asynckernel.fr. `admin.py`, `nouveau-livret.py` et `nouveau-conseil.py` (obsolètes,
+remplacés par `admin.py`) n'ont pas leur place ici — outil d'administration local uniquement.
 
 ## Ajouter un produit recommandé
 
