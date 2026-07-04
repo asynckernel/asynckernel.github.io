@@ -23,17 +23,35 @@ POSTS_JSON = ROOT / "posts.json"
 SITEMAP = ROOT / "sitemap.xml"
 SITE_URL = "https://asynckernel.fr"
 
-# Pages statiques du site. Ajoute une ligne ici à chaque nouvelle page
-# compagnon ou nouveau livret créé (le script nouveau-livret.py te le
-# rappellera aussi au moment de la création).
-STATIC_PAGES = [
-    {"path": "/", "priority": "1.0", "changefreq": "monthly"},
-    {"path": "/trois-carnets/", "priority": "0.8", "changefreq": "monthly"},
-    {"path": "/un-iphone-qui-nepuise-pas/", "priority": "0.8", "changefreq": "monthly"},
-    {"path": "/jegardelecontrolesurmonordi/", "priority": "0.8", "changefreq": "monthly"},
-    {"path": "/conseils-informatiques/", "priority": "0.6", "changefreq": "monthly"},
-    {"path": "/blog/", "priority": "0.7", "changefreq": "weekly"},
-]
+# Dossiers à la racine qui ne sont PAS des pages compagnons (infra, pas contenu)
+IGNORE_DIRS = {".git", "__pycache__", "assets", "blog", "node_modules", ".github"}
+
+
+# Ajustements de priorité pour des pages spécifiques (le reste utilise
+# la valeur par défaut 0.8). À compléter si besoin, sans que ça bloque
+# la découverte automatique des nouvelles pages.
+PRIORITY_OVERRIDES = {
+    "conseils-informatiques": "0.6",
+}
+
+
+def discover_static_pages():
+    """Scanne la racine du repo : tout dossier contenant un index.html
+    (hors dossiers infra) est traité comme une page compagnon (livret,
+    conseils-informatiques, etc). Ajouté automatiquement, sans liste à
+    maintenir à la main — voir aussi update-readme-structure.py qui suit
+    le même principe."""
+    pages = [{"path": "/", "priority": "1.0", "changefreq": "monthly"}]
+    for entry in sorted(ROOT.iterdir()):
+        if not entry.is_dir():
+            continue
+        if entry.name in IGNORE_DIRS or entry.name.startswith("."):
+            continue
+        if (entry / "index.html").exists():
+            priority = PRIORITY_OVERRIDES.get(entry.name, "0.8")
+            pages.append({"path": f"/{entry.name}/", "priority": priority, "changefreq": "monthly"})
+    pages.append({"path": "/blog/", "priority": "0.7", "changefreq": "weekly"})
+    return pages
 
 
 def load_posts():
@@ -46,7 +64,7 @@ def build_urls():
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     urls = []
 
-    for page in STATIC_PAGES:
+    for page in discover_static_pages():
         urls.append({
             "loc": f"{SITE_URL}{page['path']}",
             "lastmod": today,
