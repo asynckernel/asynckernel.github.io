@@ -16,6 +16,10 @@ Servi à l'adresse https://asynckernel.fr via GitHub Pages.
 ├── blog/                               ← notes de veille, RSS
 │   ├── agenda-memoire-morte/
 │   │   └── index.html
+│   ├── fermer-onglet-mental/
+│   │   └── index.html
+│   ├── vacances-banc-essai/
+│   │   └── index.html
 │   ├── feed.xml                        ← généré par generate_blog.py (RSS 2.0)
 │   └── index.html                      ← généré par generate_blog.py
 ├── conseils-informatiques/             ← astuces transversales, accès libre
@@ -23,6 +27,7 @@ Servi à l'adresse https://asynckernel.fr via GitHub Pages.
 ├── jegardelecontrolesurmonordi/        ← page compagnon du tome 3
 │   └── index.html
 ├── trois-carnets/                      ← page compagnon du tome 1
+│   ├── bak.html
 │   └── index.html
 ├── un-iphone-qui-nepuise-pas/          ← page compagnon du tome 2
 │   └── index.html

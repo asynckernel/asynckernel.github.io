@@ -9,14 +9,28 @@
       "title": "L'agenda comme mémoire morte",
       "date": "2026-07-02",
       "excerpt": "Pourquoi la cartographie d'énergie d'un agenda papier change la façon de planifier sa semaine.",
-      "tags": ["agenda", "cartographie d'énergie"]
+      "tags": [
+        "agenda",
+        "cartographie d'énergie"
+      ]
     },
     {
       "slug": "vacances-banc-essai",
       "title": "Les vacances comme banc d'essai",
       "date": "2026-07-04",
       "excerpt": "Pourquoi les grandes vacances sont le meilleur moment pour tester un système papier — et l'ajuster avant la rentrée.",
-      "tags": ["carnets", "vacances", "mise en place"]
+      "tags": [
+        "carnets",
+        "vacances",
+        "mise en place"
+      ]
+    },
+    {
+      "slug": "fermer-onglet-mental",
+      "title": "Le petit carnet, ou comment fermer un onglet mental",
+      "date": "2026-07-06",
+      "excerpt": "Un carnet de poche, une règle de dix secondes, et les pensées qui bouclent cessent de consommer de l'attention.",
+      "tags": []
     }
   ]
 }
