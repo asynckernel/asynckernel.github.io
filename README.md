@@ -9,8 +9,6 @@ Servi à l'adresse https://asynckernel.fr via GitHub Pages.
 <!-- STRUCTURE:START (généré par update-readme-structure.py, ne pas éditer à la main entre ces marqueurs) -->
 ```
 .
-├── .claude/
-│   └── settings.local.json
 ├── assets/
 │   ├── css/
 │   │   └── style.css                   ← feuille de style commune
@@ -19,6 +17,8 @@ Servi à l'adresse https://asynckernel.fr via GitHub Pages.
 │   ├── agenda-memoire-morte/
 │   │   └── index.html
 │   ├── fermer-onglet-mental/
+│   │   └── index.html
+│   ├── ranger-un-tiroir-pour-repartir/
 │   │   └── index.html
 │   ├── rappels-natif/
 │   │   └── index.html
@@ -37,6 +37,8 @@ Servi à l'adresse https://asynckernel.fr via GitHub Pages.
 │   └── index.html
 ├── un-iphone-qui-nepuise-pas/          ← page compagnon du tome 2
 │   └── index.html
+├── {trois-carnets,assets/
+│   └── css}/
 ├── .nojekyll                           ← désactive Jekyll (le site est servi tel quel)
 ├── 404.html                            ← page d'erreur
 ├── CNAME                               ← domaine personnalisé pour GitHub Pages
