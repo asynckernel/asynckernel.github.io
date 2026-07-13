@@ -24,6 +24,8 @@ Servi à l'adresse https://asynckernel.fr via GitHub Pages.
 │   │   └── index.html
 │   ├── sortir-sans-rien-dans-les-oreilles/
 │   │   └── index.html
+│   ├── telephone-passif-randonnee/
+│   │   └── index.html
 │   ├── vacances-banc-essai/
 │   │   └── index.html
 │   ├── feed.xml                        ← généré par generate_blog.py (RSS 2.0)
@@ -33,18 +35,17 @@ Servi à l'adresse https://asynckernel.fr via GitHub Pages.
 ├── jegardelecontrolesurmonordi/        ← page compagnon du tome 3
 │   └── index.html
 ├── trois-carnets/                      ← page compagnon du tome 1
-│   ├── bak.html
 │   └── index.html
 ├── un-iphone-qui-nepuise-pas/          ← page compagnon du tome 2
 │   └── index.html
-├── {trois-carnets,assets/
-│   └── css}/
+├── .gitignore
 ├── .nojekyll                           ← désactive Jekyll (le site est servi tel quel)
 ├── 404.html                            ← page d'erreur
 ├── CNAME                               ← domaine personnalisé pour GitHub Pages
+├── couvertures-kdp.md
+├── ETAT-PROJET.md
 ├── generate_blog.py                    ← régénère blog/index.html + blog/feed.xml
 ├── generate_sitemap.py                 ← régénère sitemap.xml (pages statiques + blog)
-├── index.bak
 ├── index.html                          ← accueil de la marque
 ├── posts.json                          ← source de vérité du blog
 ├── README.md
