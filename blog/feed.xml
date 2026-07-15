@@ -5,7 +5,14 @@
     <link>https://asynckernel.fr/blog/</link>
     <description>Notes de veille et tutoriels autour des systèmes pratiques pour penseurs intensifs.</description>
     <language>fr</language>
-    <lastBuildDate>Wed, 15 Jul 2026 04:14:14 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 15 Jul 2026 04:21:38 +0000</lastBuildDate>
+    <item>
+      <title>Les onglets ouverts ne sont pas des tâches</title>
+      <link>https://asynckernel.fr/blog/onglets-ouverts/</link>
+      <guid isPermaLink="true">https://asynckernel.fr/blog/onglets-ouverts/</guid>
+      <pubDate>Wed, 15 Jul 2026 00:00:00 +0000</pubDate>
+      <description>Chaque onglet conservé « pour plus tard » est une intention non traitée. Une règle de clôture suffit à convertir ce stock en décisions.</description>
+    </item>
     <item>
       <title>Ce que le téléphone peut faire sans vous solliciter en randonnée</title>
       <link>https://asynckernel.fr/blog/telephone-passif-randonnee/</link>

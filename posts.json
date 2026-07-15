@@ -59,6 +59,13 @@
       "date": "2026-07-13",
       "excerpt": "En randonnée, le téléphone peut être un outil passif. Trois conditions suffisent : une carte hors-ligne, une décision météo prise la veille, et une batterie qui autorise le mode avion",
       "tags": []
+    },
+    {
+      "slug": "onglets-ouverts",
+      "title": "Les onglets ouverts ne sont pas des tâches",
+      "date": "2026-07-15",
+      "excerpt": "Chaque onglet conservé « pour plus tard » est une intention non traitée. Une règle de clôture suffit à convertir ce stock en décisions.",
+      "tags": []
     }
   ]
 }
