@@ -36,6 +36,7 @@ HEADER = """  <header class="site-header">
 FOOTER = """  <footer class="site-footer">
     <div class="container">
       <p>Async Kernel <span class="prompt">&gt;_</span> · <a href="/">accueil</a> · <a href="/blog/">blog</a> · contact@asynckernel.fr</p>
+      <p class="meta">En tant que Partenaire Amazon, Async Kernel réalise un bénéfice sur les achats remplissant les conditions requises. Pour vous, cela ne change rien au prix ; pour moi, cela fait vivre le projet.</p>
     </div>
   </footer>"""
 
