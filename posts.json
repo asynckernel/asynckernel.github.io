@@ -73,6 +73,13 @@
       "date": "2026-07-20",
       "excerpt": "Les vacances réduisent les entrées : mails, réunions, sollicitations. C'est le seul moment de l'année où votre fonctionnement cognitif est observable sans le bruit. Un protocole d'une semaine suffit.",
       "tags": []
+    },
+    {
+      "slug": "microsoft-edge-techniques-grises",
+      "title": "Comment Microsoft fait pour vous empêcher de choisir Firefox",
+      "date": "2026-07-22",
+      "excerpt": "Un rapport de 2026 documente les tactiques de design de Windows qui court-circuitent le choix du navigateur. Ce que ça change pour les profils neuroatypiques.",
+      "tags": []
     }
   ]
 }

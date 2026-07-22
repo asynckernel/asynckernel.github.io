@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comment Microsoft fait pour vous empêcher de choisir Firefox · Async Kernel &gt;_</title>
+  <meta name="description" content="Un rapport de 2026 documente les tactiques de design de Windows qui court-circuitent le choix du navigateur. Ce que ça change pour les profils neuroatypiques.">
+  <meta name="theme-color" content="#162842">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="alternate" type="application/rss+xml" title="Async Kernel >_ — Blog" href="https://asynckernel.fr/blog/feed.xml">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a href="/" class="brand">Async Kernel <span class="prompt">&gt;_</span></a>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="hero">
+        <p class="section-prompt">cat microsoft-edge-techniques-grises.md</p>
+        <h1>Comment Microsoft fait pour vous empêcher de choisir Firefox</h1>
+        <p class="lede">Un rapport de 2026 documente les tactiques de design de Windows qui court-circuitent le choix du navigateur. Ce que ça change pour les profils neuroatypiques.</p>
+        <p class="meta">22/07/2026</p>
+      </div>
+
+      <section>
+        <p>Ce que Microsoft fait pour vous empêcher de choisir Firefox</p>
+
+        <p>En juillet 2026, Mozilla a publié la deuxième édition d&#x27;un rapport d&#x27;investigation indépendant intitulé <em>Over the Edge 2.0</em>. Les auteurs, Harry Brignull et Cennydd Bowles, ont audité le parcours utilisateur sur Windows 10 et Windows 11 dans quatre pays : États-Unis, Royaume-Uni, Inde et Allemagne. Leur conclusion est sans nuance : Microsoft continue de déployer des techniques de design conçues pour vous maintenir dans Edge, quelles que soient vos préférences déclarées.</p>
+
+        <h2>Ce que le rapport documente</h2>
+
+        <p>Les chercheurs identifient six catégories de procédés. Formulation trompeuse : les dialogues suggèrent qu&#x27;Edge est nécessaire ou supérieur. Obstruction : chaque étape pour installer un autre navigateur ou le définir comme défaut multiplie les clics et les confirmations. Interférence visuelle : Edge est mis en avant, les alternatives reléguées. Présélection : Edge est coché par défaut dans les options. Harcèlement : des pop-ups répétées rappellent l&#x27;existence d&#x27;Edge après chaque installation concurrente. Action forcée : certaines fonctionnalités Windows — dont Copilot — ouvrent des liens dans Edge même si votre navigateur par défaut est un autre.</p>
+
+        <p>Un cas est particulièrement révélateur. Lors d&#x27;une migration de Windows 10 vers Windows 11 via l&#x27;outil Windows Backup, le navigateur par défaut préalablement configuré n&#x27;est pas transféré. Edge reprend silencieusement cette place. La transition de système d&#x27;exploitation devient un mécanisme de réinitialisation des choix.</p>
+
+        <h2>Pourquoi ça compte davantage pour les profils neuroatypiques</h2>
+
+        <p>Le <a href="https://www.amazon.fr/dp/B0H6R6QBDT/ref=cm_sw_r_as_gl_api_gl_i_M6XGECTH67KM7WJZYE3Q?linkCode=ml1&amp;tag=asynckernel-21&amp;linkId=25ea51650208754e8a3649e9085e0db1">tome 3 de la collection</a> repose sur un principe simple : chaque interruption non souhaitée consomme une ressource cognitive qui ne se régénère pas instantanément. Les techniques documentées par le rapport Mozilla ne sont pas anodines dans ce contexte.</p>
+
+        <p>Edge est construit autour d&#x27;un modèle commercial publicitaire. Il intègre des recommandations de contenu, des suggestions d&#x27;achat, des notifications promotionnelles et un assistant Copilot. Autant de sources de stimulation parasites que les chapitres 12 à 14 du tome 3 cherchent précisément à neutraliser — en commençant par le choix du navigateur lui-même.</p>
+
+        <p>Firefox est différent sur deux points concrets. D&#x27;abord, il est développé par une organisation à but non lucratif (la Mozilla Foundation) dont le modèle économique ne repose pas sur la valorisation des données de navigation. Ensuite, son catalogue d&#x27;extensions — uBlock Origin au premier rang — permet de désactiver chirurgicalement les publicités, les animations, les suggestions contextuelles et les éléments d&#x27;interface distrayants. Le mode lecture natif de Firefox, mentionné au chapitre 14, offre une vue épurée de n&#x27;importe quelle page sans installation supplémentaire.</p>
+
+        <p>Pour les profils HPI, TSA ou TDA/H, ce n&#x27;est pas une question d&#x27;idéologie. C&#x27;est une question de surface de stimulation. Moins Edge en a, mieux c&#x27;est — mais Edge en veut plus, pas moins.</p>
+
+        <h2>Une donnée souvent sous-estimée : la vie privée comme protection concrète</h2>
+
+        <p>La navigation sous Edge, combinée aux consentements Windows et à Copilot, constitue selon le rapport un pipeline potentiel de données qui peut inclure la navigation effectuée dans d&#x27;autres navigateurs. Ce point mérite attention pour des raisons pratiques qui dépassent le principe.</p>
+
+        <p>Les données de navigation peuvent renseigner les assureurs, les organismes de crédit ou tout acteur qui accède à des profils comportementaux agrégés. Pour les personnes neuroatypiques, dont les parcours de santé, les achats ou les recherches peuvent être atypiques, l&#x27;exposition de ces données présente un risque réel — difficile à quantifier, mais difficile à ignorer.</p>
+
+        <p>Firefox, avec ses réglages par défaut renforcés et l&#x27;extension uBlock Origin, réduit mécaniquement cette surface d&#x27;exposition. Pas à zéro. Mais de façon mesurable.</p>
+
+        <h2>Ce que vous pouvez faire</h2>
+
+        <p>Installer Firefox ne suffit pas. Il faut aussi le définir comme navigateur par défaut — et le maintenir comme tel, malgré les sollicitations de Windows. Le chapitre 12 du tome 3 détaille la procédure pour chacun des trois systèmes couverts (Windows 11, macOS, Linux Mint).</p>
+
+        <p>Si vous utilisez Windows 11, deux précautions supplémentaires : désactiver Copilot dans les paramètres Windows, et vérifier que les liens ouverts depuis d&#x27;autres applications ne sont pas redirigés vers Edge (paramètre <em>Applications par défaut</em> &gt; <em>Navigateur</em>).</p>
+
+        <p>Le rapport complet de Mozilla Research est disponible librement <a href="https://research.mozilla.org/browser-competition/over-the-edge-2/">ici</a>.</p>
+
+        <p>---</p>
+
+        <p><em>Je garde le contrôle de mon ordi est disponible en <a href="https://www.amazon.fr/dp/B0H6R6QBDT/ref=cm_sw_r_as_gl_api_gl_i_M6XGECTH67KM7WJZYE3Q?linkCode=ml1&amp;tag=asynckernel-21&amp;linkId=25ea51650208754e8a3649e9085e0db1">version papier (11,99 €)</a> et en <a href="https://www.amazon.fr/dp/B0H6R7TH7S/ref=cm_sw_r_as_gl_api_gl_i_NDSH7FV75B9412C6VMH3?linkCode=ml1&amp;tag=asynckernel-21&amp;linkId=e4445d9d247b58ac0b7affdaa81d3316">version Kindle (6,99 €)</a>.</em></p>
+      </section>
+
+      <p class="meta"><a href="/blog/" style="color: var(--accent); text-decoration: none; border-bottom: 1px dotted var(--accent); padding-bottom: 2px;">← Retour au blog</a></p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Async Kernel <span class="prompt">&gt;_</span> · <a href="/">accueil</a> · <a href="/blog/">blog</a> · contact@asynckernel.fr</p>
+      <p class="meta">En tant que Partenaire Amazon, Async Kernel réalise un bénéfice sur les achats remplissant les conditions requises. Pour vous c'est gratuit, pour moi, ça permet de faire vivre le projet.</p>
+    </div>
+  </footer>
+</body>
+</html>
