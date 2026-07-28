@@ -236,7 +236,7 @@ section {
   border-bottom: 1px solid var(--rule);
 }
 
-.product h3 {
+.product h2 {
   font-family: var(--font-body);
   font-size: 1.25rem;
   font-weight: 500;
