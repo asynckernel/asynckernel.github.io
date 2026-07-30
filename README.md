@@ -12,7 +12,12 @@ Servi à l'adresse https://asynckernel.fr via GitHub Pages.
 ├── assets/
 │   ├── css/
 │   │   └── style.css                   ← feuille de style commune
-│   └── fonts/                          ← polices auto-hébergées (EB Garamond, JetBrains Mono)
+│   ├── fonts/                          ← polices auto-hébergées (EB Garamond, JetBrains Mono)
+│   └── og/
+│       ├── accueil.png
+│       ├── iphone.png
+│       ├── ordi.png
+│       └── trois-carnets.png
 ├── blog/                               ← notes de veille, RSS
 │   ├── agenda-memoire-morte/
 │   │   └── index.html
@@ -23,6 +28,8 @@ Servi à l'adresse https://asynckernel.fr via GitHub Pages.
 │   ├── microsoft-edge-techniques-grises/
 │   │   └── index.html
 │   ├── onglets-ouverts/
+│   │   └── index.html
+│   ├── prediction-precoce-tdah-tsa-intelligence-artificielle/
 │   │   └── index.html
 │   ├── ranger-un-tiroir-pour-repartir/
 │   │   └── index.html

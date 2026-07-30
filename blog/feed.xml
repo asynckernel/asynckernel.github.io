@@ -5,7 +5,14 @@
     <link>https://asynckernel.fr/blog/</link>
     <description>Notes de veille et tutoriels autour des systèmes pratiques pour penseurs intensifs.</description>
     <language>fr</language>
-    <lastBuildDate>Wed, 22 Jul 2026 03:17:31 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 30 Jul 2026 05:54:24 +0000</lastBuildDate>
+    <item>
+      <title>TDAH, TSA et intelligence artificielle : des motifs qui existaient déjà</title>
+      <link>https://asynckernel.fr/blog/prediction-precoce-tdah-tsa-intelligence-artificielle/</link>
+      <guid isPermaLink="true">https://asynckernel.fr/blog/prediction-precoce-tdah-tsa-intelligence-artificielle/</guid>
+      <pubDate>Thu, 30 Jul 2026 00:00:00 +0000</pubDate>
+      <description>Une étude de Duke Health montre qu'un modèle entraîné sur des dossiers médicaux électroniques repère un risque de TDAH des années avant le diagnostic clinique. Pourquoi ce type de résultat parle particulièrement aux profils neurodivergents, et pourquoi il ne change rien à l'essentiel du repérage individuel.</description>
+    </item>
     <item>
       <title>Comment Microsoft fait pour vous empêcher de choisir Firefox</title>
       <link>https://asynckernel.fr/blog/microsoft-edge-techniques-grises/</link>
