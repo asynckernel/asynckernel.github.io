@@ -87,6 +87,20 @@
       "date": "2026-07-30",
       "excerpt": "Une étude de Duke Health montre qu'un modèle entraîné sur des dossiers médicaux électroniques repère un risque de TDAH des années avant le diagnostic clinique. Pourquoi ce type de résultat parle particulièrement aux profils neurodivergents, et pourquoi il ne change rien à l'essentiel du repérage individuel.",
       "tags": []
+    },
+    {
+      "slug": "classer-ses-photos-sans-algorithme",
+      "title": "Classer ses photos : un système, pas un algorithme",
+      "date": "2026-08-13",
+      "excerpt": "Éclipse, vacances : deux occasions de multiplier les clichés. Pourquoi un classement manuel et déterministe coûte moins cher, cognitivement, que de laisser un algorithme trier à votre place.",
+      "tags": []
+    },
+    {
+      "slug": "classer-ses-photos-guide-par-plateforme",
+      "title": "Classer ses photos, plateforme par plateforme",
+      "date": "2026-08-14",
+      "excerpt": "Le système à trois règles appliqué concrètement : iPhone, Android, Windows 11, macOS, Linux Mint. Marche à suivre, sans dépendre du tri automatique.",
+      "tags": []
     }
   ]
 }

@@ -21,6 +21,10 @@ Servi à l'adresse https://asynckernel.fr via GitHub Pages.
 ├── blog/                               ← notes de veille, RSS
 │   ├── agenda-memoire-morte/
 │   │   └── index.html
+│   ├── classer-ses-photos-guide-par-plateforme/
+│   │   └── index.html
+│   ├── classer-ses-photos-sans-algorithme/
+│   │   └── index.html
 │   ├── fermer-onglet-mental/
 │   │   └── index.html
 │   ├── l-ete-un-laboratoire-a-faible-bruit/
